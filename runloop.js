@@ -38,4 +38,4 @@
 		this.loop();
 	};
 	runloop.start();
-}(typeof module == 'object' ? module.exports : window.tempartParser = {}));
+}(typeof module == 'object' ? module.exports : window.runloop = {}));
