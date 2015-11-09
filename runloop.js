@@ -4,7 +4,7 @@
 	runloop.jobs = [];
 	////-----------------------------------------------------------------------------------------
 	// How many miliseconds should triggering the jobs
-	runloop.interval = 10;
+	runloop.interval = 100;
 	////-----------------------------------------------------------------------------------------
 	// What tick we are currently in
 	runloop.tick = 0;
