@@ -1,0 +1,25 @@
+{
+  "name": "runloop",
+  "main": "runloop.js",
+  "homepage": "https://github.com/plusgut/runloop",
+  "authors": [
+    "plusgut <cj@lvl3.org>"
+  ],
+  "description": "very basic runloop",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "runloop"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
