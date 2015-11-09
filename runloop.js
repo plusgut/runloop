@@ -4,19 +4,22 @@
 	runloop.jobs = [];
 	////-----------------------------------------------------------------------------------------
 	// How many miliseconds should triggering the jobs
-	runloop.ticks = 10;
+	runloop.interval = 10;
+	////-----------------------------------------------------------------------------------------
+	// What tick we are currently in
+	runloop.tick = 0;
 	////-----------------------------------------------------------------------------------------
 	// Calls runloop jobs
 	// @TODO call not every controller on each tick but depending on there interval
 	// @TODO remove job when not needed
 	runloop.loop = function(){
 		for( var i = 0; i < this.jobs.length; i++ ){
-			this.jobs[ i ].callback();
+			this.jobs[ i ].callback(this.tick);
 		}
 
 		this.tick++;
 		if( !this.stopped ){
-			setTimeout( this.loop.bind( this ), this.ticks );
+			setTimeout( this.loop.bind( this ), this.interval );
 		}
 	};
 	////-----------------------------------------------------------------------------------------
